@@ -82,7 +82,7 @@ The first datetime column found in the response will be the time index for all t
 **Metric**  
 Any number type columns are considered to be a metrics. The name of the metric will be the name of the number column in the response.
 
-**Dimensions**
+**Dimensions**  
 Any other types of columns will become dimensions for the metric. The most common type would be a string column. A dimension ends up as a key=value pair. The key comes from the name of the column, the value will be from the values of that column.
 
 Having dimensions is optional for a query.
