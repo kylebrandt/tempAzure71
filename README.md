@@ -106,6 +106,14 @@ avg_CounterValue {Computer="myOtherHost", InstanceName="d"}
 
 Where `avg_CounterValue` was a Number valued column and came from `avg(CounterValue)`, and the dimensions are `{Computer="myHost", InstanceName="/"}`. Which comes from selecting the columns `Computer` and `InstanceName`. The values, `myHost` and `/` come from the rows of their respective columns.
 
+This can also be seen in action by making this query with "Format As" set to "Table" and the table visualization and then comparing it the same query with "Format As" set to "Time series"
+
+Format As Table:  
+![table view of format as table](azure_log_formatAs_table.png)
+
+Format As Time Series:
+![table view of format as series](azure_log_formatAs_series.png)
+
 ## Setting up for the future
 
 By supporting multidimensionality, we are setting the data source up for one of the features we want in the next generation of Grafana alerting, which is too have a single query, and be able to automatically have multiple alerts per specifiable dimensions.
