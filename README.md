@@ -105,3 +105,9 @@ avg_CounterValue {Computer="myOtherHost", InstanceName="d"}
 ```
 
 Where `avg_CounterValue` was a Number valued column and came from `avg(CounterValue)`, and the dimensions are `{Computer="myHost", InstanceName="/"}`. Which comes from selecting the columns `Computer` and `InstanceName`. The values, `myHost` and `/` come from the rows of their respective columns.
+
+## Setting up for the future
+
+By supporting multidimensionality, we are setting the data source up for one of the features we want in the next generation of Grafana alerting, which is too have a single query, and be able to automatically have multiple alerts per specifiable dimensions.
+
+Additionally, the operation that supports extracting series with multiple dimensions from Analytics Services' Table format responses can be reused for SQL. So we will be looking to bring this same multidimensionality with queries to our SQL data sources soon.
